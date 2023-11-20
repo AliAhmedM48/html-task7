@@ -1,0 +1,227 @@
+/* #region Customizing A Scrollbar Design */
+/*^========> Customize Scrollbar <========*/
+::-webkit-scrollbar {
+    background: #000;
+    /* border-left: 100px solid #eee; */
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 6px 5px #eeeeee8c inset;
+    border-radius: 20px;
+}
+
+/* #endregion */
+
+
+/* #region shared style */
+:root {
+    /* scroll-behavior: unset; */
+    --main-color: #0078ff;
+    --section-padding: 6rem;
+}
+
+html {
+    font-size: 16px;
+}
+
+section {
+    padding-top: var(--section-padding);
+    /* Adjust this value based on the height of your navbar */
+}
+
+/* #region section title */
+.title {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    padding-bottom: 1px;
+}
+
+.title::after {
+    content: "";
+    width: 50px;
+    transform: translateX(-50%);
+    height: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 100%;
+}
+
+.title .main-title {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.title .main-title::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+    font-size: 110px;
+    z-index: -1;
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region variables*/
+
+/* #endregion */
+
+/* #region navbar */
+.navbar .navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar .navbar-nav>li>a {
+    font-weight: 600;
+    color: white;
+}
+
+/* #region  underline of nav-links */
+@media (min-width: 991px) {
+
+    .navbar .navbar-nav>li {
+        position: relative;
+        /* background-color: tomato; */
+        padding-inline: 3px;
+    }
+
+    .navbar .navbar-nav>li>a::before {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 10px;
+        top: 100%;
+
+        transition: width 0.5s;
+    }
+
+    .navbar .navbar-nav>li>a.active::before,
+    .navbar .navbar-nav>li>a.show::before,
+    .navbar .navbar-nav>li>a:hover::before {
+        width: 60%;
+    }
+}
+
+
+
+
+
+/* #endregion */
+
+.navbar li.nav-item:hover>ul.dropdown-menu,
+.navbar li.nav-item>ul.dropdown-menu>li.dropdown:hover ul.dropdown-menu {
+    display: block;
+    top: calc(100% + 2px);
+    width: fit-content;
+    position: absolute;
+}
+
+.navbar li.nav-item>ul.dropdown-menu>li.dropdown:hover ul.dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100% !important;
+    width: fit-content;
+}
+
+/* #endregion */
+
+/* #region home */
+.home {
+    min-height: 100dvh;
+
+    background-image: url(../images/hero-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    background-blend-mode: overlay;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.home .content h2 {
+    font-size: calc(40px + 2vw);
+    letter-spacing: 5px;
+}
+
+.home .content h2 span {
+    color: var(--main-color);
+    font-weight: 900;
+}
+
+.home .content h2+h3 {
+    font-size: calc(30px + 0.1vw);
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* #endregion */
+
+/* #region about */
+.about .main-title {
+    position: relative;
+}
+
+.about .main-title::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 90px;
+    height: 3px;
+    top: 45px;
+    left: 0;
+}
+
+/* #endregion */
+
+/* #region services */
+.services {
+    height: 100vh;
+}
+
+.services .title .main-title::before {
+    content: "SERVICES";
+}
+
+/* #endregion */
+
+/* #region portfolio */
+.portfolio {
+    height: 100vh;
+}
+
+.portfolio .title .main-title::before {
+    content: "portfolio";
+}
+
+/* #endregion */
+
+/* #region blog */
+.blog {
+    height: 100vh;
+}
+
+.blog .title .main-title::before {
+    content: "blog";
+}
+
+/* #endregion */

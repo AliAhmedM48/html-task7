@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- ! -->
+    <!-- #region Meta tags of the document -->
+
+    <!-- #region Keep in mind ABOUT META TAGS -->
+    <!-- ! If you don’t want to display your web page in search results at all, -->
+    <!-- ! just add this meta tag inside your head section: -->
+    <!-- ! ----- <meta name="robots" content="none" /> ---- -->
+    <!-- *** -->
+    <!-- ! Because the keywords meta tag was so often abused, -->
+    <!-- ! many years ago Google began disregarding the keywords meta tag. -->
+    <!-- #endregion -->
+
+    <!-- #region Char Set -->
+
+    <meta charset="UTF-8" />
+
+    <!-- #endregion -->
+
+    <!-- #region View Port -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- #endregion -->
+
+    <!-- #region Description Meta Tag -->
+    <!-- ! Google will keep the first 150-160 characters of your meta description, and cut the rest. -->
+
+    <meta name="description" content="the web development with an engineer's touch." />
+
+    <!-- #endregion -->
+
+    <!-- #region Open Graph Tag -->
+    <!-- ! Facebook will use open graph to display information if your content is shared. -->
+    <!-- ! Whatsapp doesn't support picture with a size greater than 300KB. -->
+
+    <meta property="og:title" content="MrAli | Energized by engineering, passionate about web development." />
+
+    <meta property="og:site_name" content="MrAli | Web Developer" />
+
+    <meta property="og:image:secure_url" content="images/web-poster.jpg" />
+
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <meta property="og:url" content="images/web-poster.jpg" />
+
+    <meta content="E" itemprop="image" />
+
+    <meta property="og:description" content="Enjoy Your Healthy Delicious Food" />
+
+    <!-- ^ Anything above 300px will not work in WhatsApp. -->
+
+    <meta property="og:image:width" content="300" />
+
+    <meta property="og:image:height" content="300" />
+
+    <!-- #endregion -->
+
+    <!-- #region Twitter Card Tag -->
+    <!-- ! Twitter Cards work similar to OG with the exception that these are specifically for Twitter. -->
+
+    <meta name="twitter:card" content="Enjoy Your Healthy Delicious Food" />
+
+    <!-- #endregion -->
+
+    <!-- #endregion -->
+
+    <!-- #region Title -->
+    <!-- ! Google will only display the first 50-60 characters of your title, and cut the rest. -->
+    <!-- ! So long as you fit the important information before the cut-off point. ​-->
+
+    <title>Bootstraped DevFolio | MrAli</title>
+
+    <!-- #endregion -->
+
+    <!-- #region Fav icon -->
+
+    <link rel="icon" href="images/favicon.png" />
+
+    <!-- #endregion -->
+
+    <!-- #region Icons -->
+
+    <!-- ^ Bootstrap Icons File-->
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+
+    <!-- #endregion -->
+
+    <!-- #region CSS Files-->
+
+    <!-- ^ Bootstrap CSS File-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- ^ Style CSS File-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- #endregion -->
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#scroll-spy">
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-black" data-bs-theme="dark">
+        <!-- #region navbar -->
+        <div class="container">
+            <h1><a class="navbar-brand" href="index.html">DevFolio</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="scroll-spy" class="navbar-nav ms-auto">
+                    <!-- #region navbar-nav list -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">BLOG</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <!-- #region dropdown list -->
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="true">
+                            DROP DOWN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="">Drop Down 1</a></li>
+                            <li class="dropdown dropend">
+                                <!-- #region Deep Drop Down list -->
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                    data-bs-auto-close="true" aria-expanded="false">
+                                    Deep Drop Down
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="">Deep Drop Down 1</a></li>
+                                    <li><a class="dropdown-item" href="">Deep Drop Down 2</a></li>
+                                    <li><a class="dropdown-item" href="">Deep Drop Down 3</a></li>
+                                    <li><a class="dropdown-item" href="">Deep Drop Down 4</a></li>
+                                    <li><a class="dropdown-item" href="">Deep Drop Down 5</a></li>
+                                </ul>
+                                <!-- #endregion -->
+                            </li>
+                            <li><a class="dropdown-item" href="">Drop Down 2</a></li>
+                            <li><a class="dropdown-item" href="">Drop Down 3</a></li>
+                            <li><a class="dropdown-item" href="">Drop Down 4</a></li>
+                        </ul>
+                        <!-- #endregion -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <!-- #endregion -->
+                </ul>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </nav>
+
+    <header id="home" class="home">
+        <!-- #region home -->
+        <div class="container">
+            <div class="content">
+                <h2>I am <span>MrAli</span></h2>
+                <!-- Element to contain animated typing -->
+                <h3><span id="element"></span></h3>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <!-- #region about -->
+            <div class="container">
+
+                <div class="row shadow-lg p-5">
+
+                    <div class="col-sm-12 col-md-6  ">
+
+                        <div class="content">
+                            <figure class="row">
+                                <div class="col-sm-12 col-lg-5">
+                                    <div>
+                                        <img src="images/testimonial-2.jpg" alt="profile-pic" class="rounded-3">
+                                    </div>
+                                </div>
+                                <figcaption class="col-sm-12 col-lg-7 ">
+
+                                    <div class="about-info">
+                                        <p><span class="fw-bold">Name: </span> <span>Morgan Freeman</span></p>
+                                        <p><span class="fw-bold">Profile: </span> <span>full stack developer</span></p>
+                                        <p><span class="fw-bold">Email: </span> <span>contact@example.com</span></p>
+                                        <p><span class="fw-bold">Phone: </span> <span>(617) 557-0089</span></p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+
+                            <div class="py-3 pe-5">
+                                <!-- #region Skill -->
+                                <h3 class="mb-4">Skill</h3>
+                                <div class="html mb-3">
+                                    <span>HTML 85%</span>
+                                    <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="css mb-3">
+                                    <span>CSS 75%</span>
+                                    <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="php mb-3">
+                                    <span>PHP 50%</span>
+                                    <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="php mb-3">
+                                    <span>JAVASCRIPT 90%</span>
+                                    <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <!-- #region About me -->
+                        <div class="content">
+                            <h2 class="mb-4 main-title">About me</h2>
+                            <p class="mb-4">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur
+                                arcu erat,
+                                accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a
+                                pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.</p>
+                            <p class="mb-4">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+                                suscipit tortor eget
+                                felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit
+                                amet dui. porttitor at sem.</p>
+                            <p class="mb-4">Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia
+                                in, elementum
+                                id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt
+                                nibh pulvinar a.</p>
+                        </div>
+                        <!-- #endregion -->
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion -->
+        </section>
+
+        <section id="services" class="services">
+            <!-- #region services -->
+            <div class="container">
+                <div class="content">
+                    <div class="title">
+                        <h2 class="main-title">services</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- #endregion -->
+        </section>
+        <section id="portfolio" class="portfolio">
+            <!-- #region portfolio -->
+            <div class="container">
+                <div class="content">
+                    <div class="title">
+                        <h2 class="main-title">portfolio</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- #endregion -->
+        </section>
+        <section id="blog" class="blog">
+            <!-- #region blog -->
+            <div class="container">
+                <div class="content">
+                    <div class="title">
+                        <h2 class="main-title">blog</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- #endregion -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- #region footer -->
+
+        <!-- #endregion -->
+    </footer>
+
+    <!-- #region Typed.js -->
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Photographer', 'Designer', 'Developer', 'Freelancer'],
+
+            // stringsElement: null,
+
+            // time before typing starts
+            // startDelay: 1200,
+            // typing speed
+            typeSpeed: 60,
+
+
+            // time before backspacing
+            backDelay: 1500,
+            // backspacing speed
+            backSpeed: 30,
+
+            // loop
+            loop: true,
+            // false = infinite
+            // loopCount: 10,
+
+            // show cursor
+            // showCursor: true,
+
+            // character for cursor
+            cursorChar: "_",
+            shuffle: true,
+            smartBackspace: false,
+            // attribute to type (null == text)
+            attr: null,
+            // either html or text
+            contentType: 'html',
+            // call when done callback function
+            callback: function () { },
+            // starting callback function before each string
+            preStringTyped: function () { },
+            //callback for every typed string
+            onStringTyped: function () { },
+            // callback for reset
+            resetCallback: function () { }
+
+        });
+    </script>
+    <!-- #endregion -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
