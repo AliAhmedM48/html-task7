@@ -53,6 +53,15 @@ a {
     color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1e1e1e;
+}
+
 /* #region Custom utilies classes */
 .text-main-color {
     color: #0078ff;
