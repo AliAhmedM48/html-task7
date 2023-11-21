@@ -15,31 +15,13 @@
 /* #endregion */
 
 /* #region shared style */
-:root {
-    /* scroll-behavior: unset; */
-
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --main-color: #0078ff;
-    --section-padding: 6rem;
-
-    --bs-body-color: #4e4e4e;
-    --bs-body-font-weight: 400;
-
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-}
 
 html {
     font-size: 16px;
 }
 
-/* section {
-    padding-top: var(--section-padding);
-    Adjust this value based on the height of your navbar
-} */
 body {
+    background-color: #f5f5f5;
     color: var(--bs-body-color);
     font-weight: var(--bs-body-font-weight);
     font-family: var(--bs-body-font-family);
@@ -62,6 +44,84 @@ h6 {
     color: #1e1e1e;
 }
 
+
+/* #region section title */
+.title-box-2 {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    padding-bottom: 1px;
+}
+
+.title-box-2::after {
+    content: "";
+    width: 50px;
+    transform: translateX(-50%);
+    height: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 100%;
+}
+
+.title-box-2 h2 {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.title-box-2 h2::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+    font-size: calc(3rem + 3vw);
+    z-index: -1;
+}
+
+@media (width < 500px) {
+    .title-box-2 {
+        padding-bottom: 20px;
+    }
+
+    .title-box-2 h2 {
+
+        margin-bottom: 15px;
+    }
+
+    .title-box-2 p {
+        max-width: 60%;
+        margin: auto;
+    }
+
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region variables */
+:root {
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --main-color: #0078ff;
+    --section-padding: 6rem;
+
+    --bs-body-color: #4e4e4e;
+    --bs-body-font-weight: 400;
+
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    scroll-padding-top: 72px;
+}
+
+/* #endregion */
+
 /* #region Custom utilies classes */
 .text-main-color {
     color: #0078ff;
@@ -82,8 +142,8 @@ h6 {
 }
 
 
-.sect-pt-4 {
-    padding-top: 4rem;
+.sect-pt {
+    padding-top: 3rem;
 }
 
 .w-fit {
@@ -105,54 +165,52 @@ h6 {
     }
 }
 
-/* #endregion */
+.title-box-1 {
+    margin-bottom: 3rem;
+}
 
-/* #region section title */
-.title {
+.title-box-2 {
+    margin-bottom: 3rem;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
+
+
+.ico-circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
     text-align: center;
-    width: fit-content;
-    margin: auto;
-    position: relative;
-    padding-bottom: 1px;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: block;
 }
 
-.title::after {
-    content: "";
-    width: 50px;
-    transform: translateX(-50%);
-    height: 5px;
-    background-color: var(--main-color);
-    position: absolute;
-    top: 100%;
+
+
+
+
+.card-shadow {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
 
-.title .main-title {
-    text-decoration: none;
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    margin-bottom: 30px;
-}
 
-.title .main-title::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, -50%);
-    font-size: calc(3rem + 3vw);
-    z-index: -1;
-}
+
 
 /* #endregion */
 
-/* #endregion */
 
-/* #region variables*/
 
-/* #endregion */
 
+
+
+/* ! Done */
 /* #region navbar */
 .navbar .navbar-brand {
     font-size: 2rem;
@@ -213,7 +271,7 @@ h6 {
 }
 
 /* #endregion */
-
+/* ! Done */
 /* #region home */
 .home {
     min-height: 100dvh;
@@ -236,46 +294,9 @@ h6 {
 
 }
 
-/* 
-.home .content h2 {
-    font-size: calc(40px + 2vw);
-    letter-spacing: 5px;
-}
-
-.home .content h2 span {
-    color: var(--main-color);
-    font-weight: 900;
-}
-
-.home .content h2+h3 {
-    font-size: calc(30px + 0.1vw);
-    letter-spacing: 3px;
-    font-weight: 700;
-} */
-
 /* #endregion */
-
+/* ! Done */
 /* #region about */
-.about .main-title {
-    position: relative;
-}
-
-.about .main-title::before {
-    content: "";
-    position: absolute;
-    background-color: var(--main-color);
-    width: 90px;
-    height: 3px;
-    top: 45px;
-    left: 0;
-}
-
-
-
-
-
-
-
 
 .about .img-frame {
     margin-bottom: 2rem;
@@ -294,15 +315,82 @@ h6 {
     }
 }
 
+.about .main-title {
+    font-size: 2rem;
+    position: relative;
+}
+
+.about .main-title::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+
+    background-color: var(--main-color);
+    width: 100px;
+    height: 3px;
+}
+
 /* #endregion */
 
 /* #region services */
 .services {
-    height: 100vh;
+    /* height: 100vh; */
 }
 
-.services .title .main-title::before {
-    content: "SERVICES";
+
+@media (width > 500px) {
+    .services .title-box-2 h2::before {
+        content: "SERVICES";
+    }
+}
+
+.services .card .card-icon .ico-circle i {
+    line-height: 0;
+    font-size: 40px;
+}
+
+.services .card .card-icon .ico-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    transition: all 500ms ease;
+}
+
+.services .card:hover .card-icon .ico-circle {
+    color: #fff;
+    background-color: var(--main-color);
+    box-shadow: 0 0 0 10px #cde1f8;
+
+}
+
+.services .card .card-icon {
+    margin-bottom: 1rem;
+    color: #1e1e1e;
+    text-align: center;
+}
+
+
+.services .card .card-text h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+
+.services .card .card-text p {
+    text-align: center;
+    color: #4e4e4e;
+
+}
+
+.services .card {
+    background-color: #fff;
+    padding: 2.5rem 1.3rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 /* #endregion */
