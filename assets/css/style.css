@@ -459,3 +459,30 @@ h6 {
 }
 
 /* #endregion */
+
+
+@media (width > 746px) {
+    #owl-demo img {
+        width: 650px;
+        height: 400px;
+        margin: auto;
+    }
+
+    #owl-demo {
+        width: 90vw;
+
+    }
+
+
+
+}
+
+@media (width < 700px) {
+    #owl-demo a h6 {
+        font-size: 16px;
+    }
+
+    #owl-demo a h2 {
+        font-size: 10px !important;
+    }
+}
