@@ -189,8 +189,14 @@ h6 {
     margin: 0 auto;
     text-align: center;
     box-shadow: 0 0 0 10px #0078ff;
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    transition: all 500ms ease;
 }
+
 
 
 
@@ -201,7 +207,13 @@ h6 {
 }
 
 
+.bg-img {
 
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url(../images/counters-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
 
 /* #endregion */
 
@@ -331,7 +343,7 @@ h6 {
 }
 
 /* #endregion */
-
+/* ! Done */
 /* #region services */
 .services {
     /* height: 100vh; */
@@ -349,14 +361,7 @@ h6 {
     font-size: 40px;
 }
 
-.services .card .card-icon .ico-circle {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
 
-    transition: all 500ms ease;
-}
 
 .services .card:hover .card-icon .ico-circle {
     color: #fff;
@@ -391,9 +396,47 @@ h6 {
     border-radius: 1rem;
     margin-bottom: 1.5rem;
     text-align: center;
+
 }
 
 /* #endregion */
+
+/* #region counter section */
+.counter {
+    padding: 8rem 0rem;
+}
+
+@media (width < 992px) {
+
+    .counter {
+        padding-bottom: 0;
+    }
+}
+
+.counter .inner {
+    color: white;
+    text-align: center;
+}
+
+.counter .inner .counter-icon .ico-circle {
+    background-color: transparent;
+    box-shadow: 0 0 0 10px #cde1f8;
+
+    height: 60px;
+    width: 60px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+
+}
+
+.counter .inner .counter-text span {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+/* #endregion */
+
+
 
 /* #region portfolio */
 .portfolio {
